@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+}
+body {
+  background: url(images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  margin-top: 8rem;
+}
+ul {
+  list-style: none;
+}
+span,
+ul li {
+  color: gray;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  position: relative;
+  text-align: center;
+}
+header h1 {
+  margin-top: 1rem;
+  color: hsl(227, 35%, 25%);
+}
+
+header p {
+  color: hsl(225, 20%, 60%);
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+.card {
+  background-color: white;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  margin: 2rem;
+}
+
+.text-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-area p {
+  padding: 2rem 3rem;
+  color: hsl(225, 20%, 60%);
+}
+#planDuration {
+  font-size: 1rem;
+  color: hsl(225, 20%, 60%);
+}
+.price {
+  font-size: 2.5rem;
+  color: black !important;
+}
+.form {
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: hsl(226, 100%, 87%);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: url(./images/icon-slider.svg);
+  background-color: hsl(174, 86%, 45%);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 0 15px 15px 2px rgba(0, 0, 0, 0.13);
+  transition: 0.4s;
+  z-index: 100;
+}
+.slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 81%, 37%);
+}
+.plan-section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+.discount {
+  color: red;
+  background-color: rgb(241, 188, 169);
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 5rem;
+}
+
+.footer ul li {
+  margin: 1rem 0;
+}
+.check-icon {
+  margin-right: 0.5rem;
+}
+.footer ul {
+  margin: 2rem 0;
+}
+button {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background-color: hsl(228, 33%, 41%);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: hsl(223, 50%, 87%);
+  outline: none;
+  border-radius: 30px;
+  transition: 0.5s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input:hover[type="checkbox"] {
+  background-color: hsl(173, 45%, 86%);
+}
+input:checked[type="checkbox"] {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.5s ease;
+  transform: scale(0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked[type="checkbox"]::before {
+  left: 20px;
+}
+/* for responsive ness */
+#planDuration2 {
+  display: none;
+}
+
+.discount2 {
+  display: none;
+}
+
+/* mobile design */
+@media (max-width: 550px) {
+  header {
+    margin-bottom: 2rem;
+  }
+  .text-area {
+    flex-direction: column;
+  }
+  .text-area p {
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .text-area h1 {
+    padding: 0;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .plan-section span {
+    width: max-content;
+  }
+  button {
+    margin-bottom: 1rem;
+  }
+  main {
+    margin-top: 2rem;
+  }
+  #planDuration {
+    display: none;
+  }
+  #planDuration2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .slider {
+    margin-top: 2rem;
+  }
+  .discount2 {
+    display: block;
+    color: red;
+    background-color: rgb(241, 188, 169);
+    padding: 0.2rem;
+    border-radius: 5px;
+  }
+  .discount {
+    display: none;
+  }
+}
